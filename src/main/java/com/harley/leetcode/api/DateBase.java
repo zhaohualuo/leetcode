@@ -66,6 +66,11 @@ public class DateBase {
      */
 
     /**
+     * 620. 有趣的电影
+     * select * from cinema where description != 'boring' and id % 2 != 0 order by rating desc
+     */
+
+    /**
      * 627. 变更性别
      * update salary set sex = if(sex = 'm','f','m');
      */
