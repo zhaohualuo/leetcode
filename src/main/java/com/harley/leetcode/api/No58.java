@@ -1,19 +1,21 @@
 package com.harley.leetcode.api;
 
-import java.util.HashMap;
-import java.util.Map;
-
+/**
+ * 58. 最后一个单词的长度
+ */
 public class No58 {
     public static void main(String[] args) {
-        String test = "12345678";
-        //截取下标为 0 和 1
-        System.out.println(test.substring(0,2));
-        //截取下标为 2及2之后的字符
-        System.out.println(test.substring(2));
+        No58 no58 = new No58();
+        int hello_world = no58.lengthOfLastWord("Hello World");
+        System.out.println(hello_world);
+    }
 
-        Map<String, Integer> map = new HashMap<>();
-        map.put("a",1);
-        Integer b = map.get("b") + 1;
-        System.out.print(b);
+    public int lengthOfLastWord(String s) {
+        String[] split = s.split(" ");
+        if(split.length == 0) {
+            return 0;
+        } else {
+            return split[split.length-1].length();
+        }
     }
 }
